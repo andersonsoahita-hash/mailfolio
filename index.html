@@ -185,7 +185,7 @@ section.app h2{font-size:clamp(28px,3.2vw,44px);margin-bottom:10px}
 .val u{position:absolute;right:-40px;bottom:-40px;width:160px;height:160px;border-radius:50%;background:radial-gradient(closest-side,color-mix(in srgb,var(--ga) 45%,transparent),transparent);filter:blur(6px);text-decoration:none}
 .vch{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px}.vch span{padding:9px 18px;border-radius:99px;border:1px solid rgba(255,255,255,.2);font-size:13px;letter-spacing:.06em;color:#dfe5f5}
 @media(max-width:900px){.pg{grid-template-columns:1fr}}
-#main{transition:transform .7s cubic-bezier(.22,.8,.25,1);will-change:transform}section.app .grid{transition:opacity .6s}</style></head>
+</style></head>
 <body>
 <header><div class="w hero"><div class="hl">
 <span class="kick"><i></i>Bienvenue</span>
@@ -229,17 +229,17 @@ section.app h2{font-size:clamp(28px,3.2vw,44px);margin-bottom:10px}
 
 <section class="who2 pil"><div class="w"><div class="tag">Piloter un business</div>
 <h2 class="big rv">Chaque business a son <em>tableau de bord</em>.</h2>
-<p class="lead rv">Pour voir vraiment où l’on en est : ce qui rentre, ce qui sort, ce qui reste. Et parce qu’à Madagascar, l’argent d’une petite activité se mélange souvent avec l’argent personnel, mes applications le prennent en compte.</p>
+<p class="lead rv">Pour voir vraiment où l’on en est : ce qui rentre, ce qui sort, ce qui reste. </p>
 <div class="pg">
 <div class="pc"><i>01</i><b>Un tableau de bord par business</b><span>Une vue claire de l’activité : ventes, encaissements, dépenses, retards, reste à payer.</span></div>
 <div class="pc"><i>02</i><b>Un prévisionnel vérifié sur le marché</b><span>Les projections sont toujours confrontées aux marchés existants, pas à des chiffres rêvés.</span></div>
-<div class="pc"><i>03</i><b>L’origine de l’argent analysée</b><span>Chaque application passe en revue les dépenses, les ventes et toutes les entrées d’argent, et signale quand de l’argent venu d’ailleurs a fait vivre le business.</span></div>
+<div class="pc"><i>03</i><b>L’origine de l’argent analysée</b><span>Chaque application passe en revue dépenses, ventes et entrées d’argent, et signale si de l’argent personnel est entré dans le business quand il n’était pas encore autosuffisant.</span></div>
 <div class="pc"><i>04</i><b>Des conseils concrets, jamais absolus</b><span>Chaque analyse explique ce qu’il faut regarder et ce qu’on peut faire. Ce sont des conseils pour décider, pas des ordres.</span></div>
 </div></div></section>
 <div class="sec-h"><div class="w"><div class="tag">Mes créations</div><h2>Quelques créations, <em>une par une</em></h2><p>Continuez à descendre : elles défilent vers la gauche. Vous pouvez aussi cliquer dans chaque interface.</p></div></div>
 <div class="hs2" id="hs2"><div class="stk"><nav class="idx"><div class="w" id="idx"></div></nav><main id="main"></main><div class="pbar"><i id="pbi"></i></div></div></div>
 <section class="contact" id="contact"><div class="w ct"><div class="tag">Me faire confiance</div><h2>Un besoin, une idée, ou l’envie d’en <em>parler</em> ?</h2><p>Que ce soit pour créer un outil sur mesure, le sécuriser, former une équipe à l’IA ou simplement échanger, je vous réponds personnellement. Écrivez-moi, on regarde ça ensemble.</p>
-<div class="ctas"><a class="cta" href="mailto:andersonsoahita@gmail.com">andersonsoahita@gmail.com</a><a class="cta alt" href="https://andersonsoahita-hash.github.io/Portfolio-/" target="_blank" rel="noopener">Mon portfolio</a><a class="cta alt" id="lk" href="" target="_blank" rel="noopener">LinkedIn</a></div></div></section>
+<div class="ctas"><a class="cta" href="mailto:andersonsoahita@gmail.com">andersonsoahita@gmail.com</a><a class="cta alt" href="https://andersonsoahita-hash.github.io/Portfolio-/" target="_blank" rel="noopener">Mon portfolio</a><a class="cta alt" id="lk" href="https://www.linkedin.com/in/stephen-anderson-soahita-715a2b321" target="_blank" rel="noopener">LinkedIn</a></div></div></section>
 <a class="fab" href="mailto:andersonsoahita@gmail.com">Me contacter</a>
 <footer>Stephen Anderson Soahita · by Stephen</footer>
 <script>
@@ -327,7 +327,4 @@ navA.forEach(a=>a.addEventListener('click',e=>{if(innerWidth<=900)return;e.preve
 /* evolving words */
 (function(){const W=['de nouvelles tâches','de nouvelles rencontres','de nouveaux projets','de nouvelles activités','de nouveaux défis'];let i=0;const e=document.getElementById('evw');setInterval(()=>{i=(i+1)%W.length;e.innerHTML='<b>'+W[i]+'</b>'},2300);
 const po=new IntersectionObserver(es=>es.forEach(x=>{if(x.isIntersecting)x.target.classList.add('on')}),{threshold:.1});document.querySelectorAll('.pc').forEach((x,k)=>{x.style.transitionDelay=(k*.12)+'s';po.observe(x)});setTimeout(()=>document.querySelectorAll('.pc').forEach(x=>x.classList.add('on')),4500);})();
-/* snap */
-(function(){let tm;function snap(){if(innerWidth<=900)return;const r=hs2.getBoundingClientRect();if(r.top>0||r.bottom<innerHeight)return;const span=hs2.offsetHeight-innerHeight;const pos=Math.min(N-1,Math.max(0,-r.top/span*(N-1)));const i=Math.round(pos);if(Math.abs(pos-i)<.02)return;const top=hs2.getBoundingClientRect().top+scrollY;scrollTo({top:top+span*(i/(N-1)),behavior:'smooth'})}
-addEventListener('scroll',()=>{clearTimeout(tm);tm=setTimeout(snap,160)},{passive:true})})();
 </script></body></html>
